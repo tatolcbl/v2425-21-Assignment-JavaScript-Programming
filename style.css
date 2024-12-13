@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Geo:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Dots&display=swap');
+
+body {
+    font-family: 'Funnel Display';
+    background-color: rgb(70, 23, 143);
+}
+
+h1 {
+    font-family: 'Doto';
+    font-size: 700%;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(255, 255, 0);
+}
+
+#reviewh1 {
+    position: fixed;
+    top:-60px;
+    left: 580px;
+}
+
+h2 {
+    font-size: 400%;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    font-size: 200%;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+}
+
+
+
+.playerNumberButtons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.playerNumberButtons button {
+    color: rgb(70, 23, 143);
+    background-color: rgb(185, 232, 112);
+    font-family: 'Funnel Display';
+    font-size: 300%;
+    padding: 80px 100px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;    
+}
+
+.playerNumberButtons button:hover {
+    background-color: rgb(70, 23, 243);
+    transform: scale(1.1); /* increase the size a the button when the mouse hover on it */
+}
+
+
+
+.subjectDifficultyButtons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.subjectDifficultyButtons button {
+    color: rgb(70, 23, 143);
+    background-color: rgb(185, 232, 112);
+    font-family: 'Funnel Display';
+    font-size: 300%;
+    padding: 20px 100px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;    
+}
+
+.subjectDifficultyButtons button:hover {
+    background-color: rgb(70, 23, 243);
+    transform: scale(1.1);
+}
+
+/* let one subject button and one difficulty button at the time in the clicked color, once clicked */
+.subjectDifficultyButtons button.active {
+    background-color: rgb(70, 23, 243);
+}
+
+
+
+#leaveButton {
+    color: rgb(70, 23, 143);
+    background-color: rgb(185, 232, 112);
+    font-size: 300%;
+    padding: 40px 50px;
+    border: none;
+    margin-top: 50px;
+    border-radius: 10px;
+    float: left;
+    transition: background-color 0.3s ease;
+}
+
+#leaveButton:hover {
+    background-color: rgb(70, 23, 243);
+}
+
+
+
+#startButton {
+    color: rgb(70, 23, 143);
+    background-color: rgb(185, 232, 112);
+    font-family: 'Funnel Display';
+    font-size: 300%;
+    padding: 40px 20px;
+    border: none;
+    margin-top: 50px;
+    border-radius: 10px;
+    float: right;
+    transition: background-color 0.3s ease;
+}
+
+#startButton:hover {
+    background-color: rgb(70, 23, 243);
+}
+
+
+
+.answerButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns of equal size */
+    gap: 20px; /* space between buttons */
+    width: 90%;
+    margin: 0 auto; /* center horizontaly the buttons */
+}
+
+.answerButtons button {
+    color: rgb(70, 23, 143);
+    background-color: rgb(185, 232, 112);
+    font-family: 'Funnel Display';
+    font-size: 150%;
+    border: none;
+    border-radius: 10px;
+    height: 130px;
+    transition: background-color 0.3s ease;
+}
+
+.answerButtons button:hover {
+    background-color: rgb(70, 23, 243);
+}
+
+
+
+#timer {
+    color: rgb(70, 23, 143);
+    background-color: rgb(185, 232, 112);
+    font-size: 200%;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+    margin: 40px 20px;
+    position: fixed;
+    bottom: 10px;
+    right: 520px;
+    width: 24%;
+    text-align: center;
+}
+
+
+
+#submitButton {
+    color: rgb(70, 23, 143);
+    background-color: rgb(185, 232, 112);
+    font-family: 'Funnel Display';
+    font-size: 300%;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 10px;
+    margin: 40px 20px;
+    position: fixed;
+    bottom: 10px;
+    right: 63px;
+    transition: background-color 0.3s ease;
+}
+
+#submitButton:hover {
+    background-color: rgb(70, 23, 243);
+}
+
+
+/* container of the paragraph element in the leaderboard */
+.leaderBoard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 240px;
+    right: 155px;
+    width: 80%;
+    height: 40%;
+    justify-content: center;
+}
+
+
+.leaderBoard p {
+    color: rgb(70, 23, 143);
+    background-color: rgb(185, 232, 112);
+    font-size: 150%;
+    font-weight: 1000;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 66%;
+    text-align: center;
+}
+
+
+
+#restartButton {
+    color: rgb(70, 23, 143);
+    background-color: rgb(185, 232, 112);
+    font-family: 'Funnel Display';
+    font-size: 300%;
+    padding: 40px 20px;
+    border: none;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 40px;
+    right: 500px;
+    transition: background-color 0.3s ease;
+}
+
+#restartButton:hover {
+    background-color: rgb(70, 23, 243);
+}
+
+
+
+#reviewButton {
+    color: rgb(70, 23, 143);
+    background-color: rgb(185, 232, 112);
+    font-family: 'Funnel Display';
+    font-size: 300%;
+    padding: 40px 20px;
+    border: none;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#reviewButton:hover {
+    background-color: rgb(70, 23, 243);
+}
+
+
+
+.reviewBoard {
+    background-color: rgb(70, 23, 143);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 17%;
+    bottom: 3%;
+    left: 20%; 
+    right: 20%;
+    overflow-y: auto; /* allow to verticaly scroll throught the review board */
+}
+
+.reviewBoard::-webkit-scrollbar {
+    display: none; /* hide scrolling bar on Webkit-based browsers */
+}
+
+
+
+/* container for each question */
+.question-container {
+    background-color: rgba(184, 232, 112, 0.9);
+    padding-top: 1px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.question-text {
+    font-weight: 600;
+    font-size: 120%;
+    margin-bottom: 10px;
+}
+
+.correct-answer {
+    font-weight: 700;
+    font-size: 100%;
+    margin-bottom: 10px;
+}
+
+
+
+#leaveReviewButton {
+    color: rgb(70, 23, 143);
+    background-color: rgb(185, 232, 112);
+    font-size: 300%;
+    padding: 40px 50px;
+    border: none;
+    border-radius: 10px;
+    position: fixed;
+    left: 10px;
+    bottom: 23px;
+    transition: background-color 0.3s ease;
+}
+
+#leaveReviewButton:hover {
+    background-color: rgb(70, 23, 243);
+}

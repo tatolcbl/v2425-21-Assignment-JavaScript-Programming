@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="icon" type="image/png" href="purpleHeart.png" /> <!-- display the site icon -->
+        <link rel="stylesheet" href="style.css"> <!-- link to the CSS stylesheet -->
+        <title>The front-end quiz</title>
+    </head>
+    <body>
+        <audio id="quizMusic" src="quizMusic.mp3" loop autoplay></audio> <!-- background music for the quiz -->
+        <audio id="clickSound" src="clickSound.mp3"></audio> <!-- sound for button clicks -->
+        <div class="screen1"> <!-- screen for selecting the number of players -->
+            <h1>The front-end quiz</h1>
+
+            <h2>Select the number of players:</h2>
+            <div class="playerNumberButtons">
+                <button playerNumber="1">1</button>
+                <button playerNumber="2">2</button>
+                <button playerNumber="3">3</button>
+                <button playerNumber="4">4</button>
+            </div>
+        </div>
+
+        <div class="screen2"> <!-- screen for selecting subject and difficulty -->
+            <h2>Select the subject:</h2>
+            <div class="subjectDifficultyButtons"> <!-- container for subject buttons -->
+                <button subject="HTML">HTML</button>
+                <button subject="CSS">CSS</button>
+                <button subject="JavaScript">JS</button>
+                <button subject="mixed">mixed</button>
+            </div>
+
+            <h2>Select the difficulty:</h2>
+            <div class="subjectDifficultyButtons"> <!-- container for difficulty buttons -->
+                <button difficulty="easy">easy</button>
+                <button difficulty="medium">medium</button>
+                <button difficulty="hard">hard</button>
+            </div>
+            <button id="leaveButton" leave="leave">&#11013;</button> <!-- back button -->
+            <button id="startButton" start="start">START &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9654;</button> <!-- start button -->
+        </div>
+
+        <div class="screen3"> <!-- screen for answering questions -->
+            <h3>It's Player 1-4's turn</h3>
+            <h2>Question?</h2>
+            <div class="answerButtons"> <!-- container for answer buttons -->
+                <button answer="a">Answer a</button>
+                <button answer="b">Answer b</button>
+                <button answer="c">Answer c</button>
+                <button answer="d">Answer d</button>
+            </div>
+            <p id="timer" >Time left: 10 seconds</p> <!-- countdown timer -->
+            <button id="submitButton" submit="submit">SUBMIT</button> <!-- submit button -->
+        </div>
+
+        <div class="screen4" > <!-- leaderboard screen -->
+            <h1>Leader board</h1>
+            <div class="leaderBoard"></div> <!-- container for displaying scores -->
+            <button id="restartButton" restart="restart">RESTART &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#8634;</button> <!-- restart button -->
+            <button id="reviewButton" review="review">REVIEW &#x1F4CB;</button> <!-- review button -->
+        </div>
+
+        <div class="screen5"> <!-- review screen -->
+            <h1 id="reviewh1">Review</h1>
+            <div class="reviewBoard"></div> <!-- container for review details -->
+            <button id="leaveReviewButton" leaveReview="leaveReview">&#11013;</button> <!-- back button from review -->
+        </div>
+
+        <script src="app.js"></script> <!-- link to the JavaScript file -->
+    </body>
+</html>
